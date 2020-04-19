@@ -5,15 +5,15 @@
 def canUnlockAll(boxes):
     """determines if all the boxes can be opened"""
 
-    length = len(boxes)
+    num_boxes = len(boxes)
     keys = [0]
 
     for key in keys:
         box = boxes[key]
-        for key in box:
-            if key not in keys:
-                keys.append(key)
-    if length == len(keys):
+        for new_key in box:
+            if new_key < num_boxes and new_key not in keys:
+                keys.append(new_key)
+    if num_boxes == len(keys):
         return True
     else:
         return False
