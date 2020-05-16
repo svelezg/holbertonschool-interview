@@ -23,7 +23,7 @@ static void print_grid(int grid[3][3])
 }
 
 /**
- * is_stable - checks if sand pile is stable.
+ * is_stable - checks if sand pile is stable
  *
  * @grid: grid to check.
  * Return: 1 if stable 0 if not.
