@@ -23,16 +23,16 @@ try:
         counter += 1
 
         if counter == 10:
-            print("File size: {}".format(total_size))
+            print("File size: {:d}".format(total_size))
             for k, v in sorted(dict_counter.items()):
                 if v != 0:
-                    print("{}: {}".format(k, v))
+                    print("{}: {:d}".format(k, v))
             counter = 0
 
 except Exception:
     pass
 finally:
     print("File size: {}".format(total_size))
-    for k, v in dict_counter.items():
+    for k, v in sorted(dict_counter.items()):
         if v != 0:
             print("{}: {}".format(k, v))
