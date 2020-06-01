@@ -24,7 +24,7 @@ try:
 
         if counter == 10:
             print("File size: {}".format(total_size))
-            for k, v in dict_counter.items():
+            for k, v in sorted(dict_counter.items()):
                 if v != 0:
                     print("{}: {}".format(k, v))
             counter = 0
