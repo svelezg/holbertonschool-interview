@@ -14,9 +14,9 @@ dict_counter = {'200': 0, '301': 0,
 try:
     for line in sys.stdin:
         line_list = line.split(" ")
-        if len(line_list) > 2:
-            code = line_list[-2]
-            size = line_list[-1]
+        if len(line_list) == 9:
+            code = line_list[7]
+            size = line_list[8]
             if code in codes:
                 dict_counter[code] += 1
             total_size += int(size)
