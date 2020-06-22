@@ -22,7 +22,7 @@ def validUTF8(data):
                 n += 1
                 for i in range(3):
                     if data[n + i] & 192 == 128:
-                        labels[n + 1] = True
+                        labels[n + i] = True
                     else:
                         break
                 n += 3
