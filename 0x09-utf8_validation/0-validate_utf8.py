@@ -34,7 +34,7 @@ def validUTF8(data):
                 labels[n] = True
                 n += 1
                 for i in range(2):
-                    if data[n + 1] & 192 == 128:
+                    if data[n + i] & 192 == 128:
                         labels[n + i] = True
                     else:
                         break
