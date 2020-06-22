@@ -8,7 +8,6 @@ def validUTF8(data):
     :param data:
     :return: True if data is a valid UTF-8 encoding, else return False
     """
-    print("*************")
     a = 0
     if not isinstance(data, list):
         return False

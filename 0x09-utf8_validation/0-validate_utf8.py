@@ -8,13 +8,7 @@ def validUTF8(data):
     :param data:
     :return: True if data is a valid UTF-8 encoding, else return False
     """
-    if not isinstance(data, list):
-        return False
-
-    if len(data) < 1:
-        return False
-
-    labels = [False for n in range(len(data))]
+    labels = [False for n in data]
 
     n = 0
     while n < len(data):
@@ -29,7 +23,6 @@ def validUTF8(data):
                 for i in range(3):
                     if data[n + i] & 192 == 128:
                         labels[n + 1] = True
-                        i += 1
                     else:
                         break
                 n += 3
@@ -43,7 +36,6 @@ def validUTF8(data):
                 for i in range(2):
                     if data[n + 1] & 192 == 128:
                         labels[n + i] = True
-                        i += 1
                     else:
                         break
                 n += 2
