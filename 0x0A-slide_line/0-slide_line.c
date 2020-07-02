@@ -8,7 +8,7 @@
 int slide_line_left(int *line, size_t size)
 {
 	int n1 = 0, n2 = 0;
-	size_t left = 0, i;
+	size_t left = 0, right;
 
 	for (right = 0; right < size; right++)
 	{
@@ -29,15 +29,15 @@ int slide_line_left(int *line, size_t size)
 				line[left++] = n1;
 				n1 = n2;
 				n2 = 0;
-				if (i == size - 1)
+				if (right == size - 1)
 					line[left++] = n1;
 			}
 		}
-		else if (n1 != n2 && i == size - 1)
+		else if (n1 != n2 && right == size - 1)
 			line[left++] = n1;
 	}
-	for (i = left; i < size; i++)
-		line[i] = 0;
+	for (right = left; right < size; right++)
+		line[right] = 0;
 
 	return (1);
 }
