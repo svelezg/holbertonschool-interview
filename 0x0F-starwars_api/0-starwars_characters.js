@@ -1,5 +1,6 @@
 #!/usr/bin/node
-const mainUrl = 'http://swapi.co/api/films/' + process.argv[2];
+
+const mainUrl = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 const request = require('request');
 
 // Main Request
@@ -33,4 +34,3 @@ async function myAsyn (urlArray) {
     console.log(character);
   }
 }
-
