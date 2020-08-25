@@ -11,6 +11,10 @@ def rain(walls):
     :return: Integer indicating total amount of rainwater retained.
     """
     n = len(walls)
+
+    if n == 0:
+        return 0
+
     rain = 0
 
     left_side = [0] * n
