@@ -17,9 +17,9 @@ br1 = i * 2 + 1;
 br2 = br1 + 1;
 branch1 = array[br1];
 branch2 = array[br2];
-if (((br1 < size) && (br2 < size) &&
-     (branch1 >= branch2 && branch1 > array[i]))
-    || ((br1 == size - 1) && branch1 > array[i]))
+if (((br1 < size) && (br2 < size) && (branch1 >= branch2
+&&branch1 > array[i]))
+|| ((br1 == size - 1) && branch1 > array[i]))
 {
 n = array[i];
 array[i] = branch1;
