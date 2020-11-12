@@ -1,5 +1,5 @@
 # 0x1A. Double Circular Linked List
-##0. Add Nodes mandatory
+## 0. Add Nodes mandatory
 Create the source file 0-add_node.c that contains the following functions:
 
 * Add a new node to the end of a double circular linked list:
